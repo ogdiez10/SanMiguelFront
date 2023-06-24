@@ -7,6 +7,7 @@ import { createTheme } from '@mui/material';
 import Button from '@mui/material/Button';
 import { ThemeProvider } from '@mui/material/styles';
 import GetProduct from './components/GetProduct/GetProduct';
+import GetOrders from './components/GetOrders/GetOrders';
 
 const theme = createTheme({
   typography: {
@@ -25,7 +26,7 @@ function App() {
 
 
       <div className='Products'>
-        <GetProduct productID="12"></GetProduct>
+        <GetProduct sku="X003R979A1"></GetProduct>
       </div>
 
 

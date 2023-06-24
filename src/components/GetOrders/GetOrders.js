@@ -1,4 +1,3 @@
-import './GetProduct.css';
 import { useEffect, useState } from "react";
 import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api";
 
@@ -11,33 +10,31 @@ const api = new WooCommerceRestApi({
 });
 
 
-const GetProduct = (props) => {
+const GetOrders = (props) => {
 
-  let productSku = props.sku;  
-  const [products, setProducts] = useState([]);
+  const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetchProducts();
+    fetchOrders();
   }, []);
 
-  let fetchProducts = () => {
+  let fetchOrders = () => {
     api
-      .get("products/", {
+      .get("orders", {
         per_page: 20,
-        sku: productSku
       })
       .then((response) => {
         if (response.status === 200) {
-          setProducts(response.data);
+          setOrders(response.data);
         }
       })
       .catch((error) => {});
   };
 
   return (
-    <div className='productQuickView'>{JSON.stringify(products)}</div>
+        <div>{JSON.stringify(orders)}</div>
   );
 
   };
 
-export default GetProduct;
+export default GetOrders;
