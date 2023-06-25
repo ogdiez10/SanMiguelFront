@@ -4,10 +4,13 @@ import '@fontsource/outfit/400.css';
 import '@fontsource/outfit/500.css';
 import '@fontsource/outfit/700.css';
 import { createTheme } from '@mui/material';
-import Button from '@mui/material/Button';
 import { ThemeProvider } from '@mui/material/styles';
-import GetProduct from './components/GetProduct/GetProduct';
-import GetOrders from './components/GetOrders/GetOrders';
+import Nav from './components/UI/Nav';
+import Content from './components/UI/Content';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+
+
 
 const theme = createTheme({
   typography: {
@@ -20,18 +23,18 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-    <div className="App">
-      <h1>Hello</h1>
-      <Button variant="contained">Click me please</Button>
-
-
-      <div className='Products'>
-        <GetProduct sku="X003R979A1"></GetProduct>
+      <div className="App">
+        <Box sx={{ flexGrow: 1 }}>
+        <Grid container spacing={0}>
+          <Grid item xs={3}>
+          <Nav></Nav>
+          </Grid>
+          <Grid item xs={9}>
+          <Content></Content>
+          </Grid>
+        </Grid>
+        </Box>
       </div>
-
-
-    </div>
-
     </ThemeProvider>
   );
 }
