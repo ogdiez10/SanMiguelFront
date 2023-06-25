@@ -10,12 +10,14 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import LineAxisIcon from '@mui/icons-material/LineAxis';
 import HistoryIcon from '@mui/icons-material/History';
 import HailIcon from '@mui/icons-material/Hail';
+import SanMiguelLogo from '../../images/SanMiguelLogo.jpg';
 
 const Nav = () => {
 
     return (
 
         <Paper elevation={2} sx={{ width: '100%', maxWidth:320, height:'100%' }}>
+        <img src={SanMiguelLogo} alt='San Miguel Logo' id="logo" />
         <MenuList>
           <MenuItem>
             <ListItemIcon>

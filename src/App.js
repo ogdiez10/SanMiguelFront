@@ -25,11 +25,11 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className="App">
         <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={0}>
-          <Grid item xs={3}>
+        <Grid container spacing={2} height="100vh">
+          <Grid item xs={2}>
           <Nav></Nav>
           </Grid>
-          <Grid item xs={9}>
+          <Grid item xs={10}>
           <Content></Content>
           </Grid>
         </Grid>
