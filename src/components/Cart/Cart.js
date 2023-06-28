@@ -5,7 +5,7 @@ const Cart = (props) => {
 
     return(
     
-    <CarItem></CarItem>
+    <CarItem name="Coca cola" qty="2" price="16.00"></CarItem>
     
     );
 

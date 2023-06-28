@@ -1,5 +1,6 @@
 import GetProduct from "../GetProduct/GetProduct";
 import Cart from "../Cart/Cart";
+import Search from "./Search";
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 
@@ -10,6 +11,7 @@ const Content = (props) => {
     <Grid container spacing={0}>
           <Grid item xs={8}>
           <h2 align="left">Nueva orden</h2>
+          <Search></Search>
           <Cart></Cart>
           </Grid>
           <Grid item xs={4}>
