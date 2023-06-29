@@ -7,9 +7,15 @@ import { createTheme } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import Nav from './components/UI/Nav';
 import Content from './components/UI/Content';
+import Vendors from './components/Vendors/Vendors';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 
 
 const theme = createTheme({
@@ -23,6 +29,7 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <Router>
       <div className="App">
         <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={2} height="100vh">
@@ -30,11 +37,15 @@ function App() {
           <Nav></Nav>
           </Grid>
           <Grid item xs={10}>
-          <Content></Content>
+          <Routes>
+            <Route path="/" element={<Content />} />
+            <Route path="/proveedores" element={<Vendors />} />
+          </Routes>
           </Grid>
         </Grid>
         </Box>
       </div>
+      </Router>
     </ThemeProvider>
   );
 }

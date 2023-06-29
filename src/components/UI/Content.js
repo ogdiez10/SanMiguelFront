@@ -18,7 +18,7 @@ const Content = (props) => {
             <h3>Resumen</h3>
           </Grid>
         </Grid>
-    <GetProduct sku="X003R979A1"></GetProduct>
+    {/* <GetProduct sku="X003R979A1"></GetProduct> */ }
     </div>
     );
 
