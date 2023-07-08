@@ -1,7 +1,6 @@
 import './CartItem.css';
 import { TextField } from "@mui/material";
-
-
+import SearchProduct from '../Search/SearchProduct';
 const CarItem = (props) => {
 
     return(

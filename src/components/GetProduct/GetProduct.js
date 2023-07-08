@@ -2,7 +2,7 @@ import './GetProduct.css';
 import { useEffect, useState } from "react";
 import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api";
 
-
+/*
 const api = new WooCommerceRestApi({
   url: "http://localhost:8888/SanMiguel/",
   consumerKey: "ck_88815e685d81df8deae185cbf4f6a6328dbf6dfa",
@@ -41,3 +41,4 @@ const GetProduct = (props) => {
   };
 
 export default GetProduct;
+*/
