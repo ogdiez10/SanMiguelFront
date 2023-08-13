@@ -5,8 +5,8 @@ const Cart = (props) => {
 
     return(
     
-    <CarItem name="Coca cola" qty="2" price="16.00"></CarItem>
-    
+    /* <CarItem name="Coca cola" qty="2" price="16.00"></CarItem> */
+    ""
     );
 
 }
